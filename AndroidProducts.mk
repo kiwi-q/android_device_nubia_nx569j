@@ -13,4 +13,9 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_nx569j.mk
+    $(LOCAL_DIR)/arrow_nx569j.mk
+
+COMMON_LUNCH_CHOICES := \
+    arrow_nx569j-user \
+    arrow_nx569j-userdebug \
+    arrow_nx569j-eng
