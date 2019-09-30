@@ -55,6 +55,9 @@ BOARD_RAMDISK_OFFSET := 0x01000000
 TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_CONFIG := lineageos_nx569j_defconfig
 TARGET_KERNEL_SOURCE := kernel/nubia/msm8976
+
+BUILD_BROKEN_DUP_RULES := true
+
 # APEX image
 DEXPREOPT_GENERATE_APEX_IMAGE := true
 TARGET_FLATTEN_APEX := true
@@ -236,6 +239,7 @@ BOARD_HOSTAPD_DRIVER        := NL80211
 BOARD_HOSTAPD_PRIVATE_LIB   := lib_driver_cmd_$(BOARD_WLAN_DEVICE)
 WIFI_DRIVER_FW_PATH_AP      := "ap"
 WIFI_DRIVER_FW_PATH_STA := "sta"
+WIFI_HIDL_FEATURE_DISABLE_AP_MAC_RANDOMIZATION := true
 
 # Inherit from the proprietary version
 include vendor/nubia/nx569j/BoardConfigVendor.mk
