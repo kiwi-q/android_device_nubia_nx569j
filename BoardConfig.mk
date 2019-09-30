@@ -49,17 +49,16 @@ TARGET_KEYMASTER_WAIT_FOR_QSEE := true
 
 # Kernel
 BOARD_KERNEL_BASE := 0x80000000
-BOARD_KERNEL_CMDLINE := androidboot.hardware=qcom msm_rtb.filter=0x237 ehci-hcd.park=3 androidboot.bootdevice=7824900.sdhci lpm_levels.sleep_disabled=1 earlyprintk
-BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
+BOARD_KERNEL_CMDLINE := console=null androidboot.console=null androidboot.hardware=qcom msm_rtb.filter=0x237 ehci-hcd.park=3 androidboot.bootdevice=7824900.sdhci lpm_levels.sleep_disabled=1 earlyprintk androidboot.selinux=permissive
 BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
 BOARD_KERNEL_OFFSET = 0x00008000
 BOARD_KERNEL_PAGESIZE := 2048
-BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x01000000 --tags_offset 0x00000100
-BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
-
+BOARD_KERNEL_TAGS_OFFSET := 0x00000100
+BOARD_RAMDISK_OFFSET := 0x01000000
 TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_CONFIG := lineageos_nx569j_defconfig
 TARGET_KERNEL_SOURCE := kernel/nubia/msm8976
+
 
 # APEX image
 DEXPREOPT_GENERATE_APEX_IMAGE := true
